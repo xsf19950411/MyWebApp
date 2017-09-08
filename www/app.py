@@ -14,8 +14,11 @@ from datetime import datetime
 
 from aiohttp import web
 
+# import orm
+# from models import User, Blog, Comment
+
 def index(request):
-    return web.Response(body=b'<h1>Awesome</h1>')
+    return web.Response(content_type='text/html', body=b'<h1>Awesome</h1>')
 
 async def init(loop):
     app = web.Application(loop=loop)
